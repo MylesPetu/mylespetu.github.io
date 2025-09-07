@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="icon" type="image/png" href="PETU_DESIGNS-removebg-preview.png">
+
+
+  <title>Petu Designs</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+   body {
+  background-color: #121212;
+  color: #EAEAEA;
+  font-family: 'Poppins', sans-serif;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+       background-color: #1E1E1E;
+  border-bottom: 1px solid #333;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+    .nav-links a {
+       color: #EAEAEA;  
+      font-size: 16px;
+      transition: 0.2s;
+    }
+    .nav-links a:hover {
+       color: #00ADB5;  
+    }
+    .cta-btn {
+      padding: 8px 16px;
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+    .cta-btn:hover {
+      background-color: #333;
+      color: white;
+
+    }
+
+    /* Mobile Menu */
+    .menu-toggle {
+      display: none;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 90vh;
+      background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #e9e2e2;
+      
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .hero .cta-btn {
+      background: #0073e6;
+    }
+
+    /* Portfolio Grid */
+    .portfolio {
+      padding: 50px 40px;
+    }
+    .portfolio h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .grid img {
+      width: 100%;
+      border-radius: 8px;
+      transition: 0.3s;
+       box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+    .grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* About Section */
+    .about {
+      padding: 50px 40px;
+      background: #1E1E1E;
+      color: #EAEAEA;
+      text-align: center;
+    }
+    .about h2 {
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 18px;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 50px 40px;
+    }
+    .contact h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 10px;
+      background: #1E1E1E;
+      border: 1px solid #333;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
+      padding: 12px;
+      background: #00ADB5;
+      color: #121212;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #008B85;
+       color: white;
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 70px;
+        right: 40px;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="#" class="logo">
+  <img src="PETU_DESIGNS-removebg-preview.png" alt="Petu Designs Logo" style="height:60px; vertical-align:middle;">
+  <span style="margin-left:8px;">Petu Designs</span>
+</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="cta-btn">Book Consultation</a>
+    <span class="menu-toggle" id="menuToggle">☰</span>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Innovative Architectural Designs</h1>
+      <p>Blending creativity and functionality for modern spaces.</p>
+      <a href="#portfolio" class="cta-btn">View Portfolio</a>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="portfolio" id="portfolio">
+    <h2>Our Projects</h2>
+    <div class="grid">
+      <img src="ad 1.jpg" alt="Design 1">
+      <img src="ad 2.jpg" alt="Design 2">
+      <img src="ad 4.jpg" alt="Design 3">
+      <img src="ad night.jpg" alt="Design 4">
+      <img src="ad.jpg" alt="Design 5">
+      <img src="Unlimited creativity, let your imagination run….jpg" alt="Design 6">
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+      At Petu Designs, we craft innovative and sustainable architectural solutions. 
+      With a focus on functionality, aesthetics, and modern trends, 
+      our designs bring spaces to life while reflecting the unique vision of each client.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+ <!-- Footer -->
+<footer style="text-align:center; padding:20px; background:#111; color:#fff;">
+  <p>© 2025 Petu Designs. All rights reserved.</p>
+  
+  <!-- Social Icons -->
+  <div class="social-links" style="margin-top:10px;">
+    <a href="https://instagram.com/yourusername" target="_blank" style="color:#fff; font-size:20px; margin:0 10px;">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://twitter.com/yourusername" target="_blank" style="color:#fff; font-size:20px; margin:0 10px;">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+    <a href="https://snapchat.com/add/yourusername" target="_blank" style="color:#fff; font-size:20px; margin:0 10px;">
+      <i class="fa-brands fa-snapchat"></i>
+    </a>
+  </div>
+</footer>
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Contact form handling
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Thank you! Your message has been sent.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
